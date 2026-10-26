@@ -1,0 +1,36 @@
+# Cấu hình Supabase CLI (trích phần quan trọng)
+project_id = "nutricook"
+
+[api]
+enabled = true
+schemas = ["public", "graphql_public"]
+max_rows = 200            # giới hạn dòng trả về mỗi truy vấn
+
+[auth]
+site_url = "http://localhost:5173"
+additional_redirect_urls = ["http://localhost:5173/**", "https://*.vercel.app/**"]
+enable_signup = true
+minimum_password_length = 8
+
+[auth.email]
+enable_confirmations = false
+
+[auth.external.google]
+enabled = true
+client_id = "env(GOOGLE_CLIENT_ID)"
+secret = "env(GOOGLE_CLIENT_SECRET)"
+
+[functions.ai-suggest]
+verify_jwt = true         # chỉ người dùng đăng nhập; kiểm thêm bằng auth.getUser() trong code
+[functions.meal-plan-advice]
+verify_jwt = true
+[functions.account-delete]
+verify_jwt = true
+[functions.admin-account-management]
+verify_jwt = true
+[functions.vnpay-create]
+verify_jwt = true
+[functions.vnpay-ipn]
+verify_jwt = false        # VNPay gọi, không có JWT → tự kiểm chữ ký HMAC
+[functions.send-email]
+verify_jwt = true         # chỉ service role hoặc staff/admin (kiểm trong code)

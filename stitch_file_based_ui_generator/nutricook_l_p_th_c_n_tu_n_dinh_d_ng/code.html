@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>NutriCook - Ăn đúng sống khỏe</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#301400", "brand-50": "#F0FBF4", "tertiary-container": "#458062", "on-primary-container": "#f6fff5", "background": "#effdf3", "on-surface": "#121e18", "on-primary-fixed": "#002110", "surface-muted": "#F7FAF8", "on-tertiary-container": "#f6fff6", "macro-carb": "#F59E0B", "primary-fixed": "#85f9b5", "on-background": "#121e18", "on-error-container": "#93000a", "ink-500": "#5E6F65", "surface-container": "#e3f1e7", "error": "#ba1a1a", "brand-500": "#27A468", "brand-200": "#B9EACB", "outline-variant": "#bdcabe", "inverse-primary": "#68dc9b", "primary-fixed-dim": "#68dc9b", "brand-300": "#86D8A9", "surface": "#effdf3", "warn-bg": "#FFF4D6", "surface-container-high": "#ddece2", "on-tertiary-fixed-variant": "#115136", "on-error": "#ffffff", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "secondary": "#934b00", "on-tertiary": "#ffffff", "surface-sunken": "#EEF3F0", "brand-400": "#4FBF84", "brand-800": "#155439", "tertiary-fixed": "#b1f0cc", "accent-100": "#FFE9D3", "ok-fg": "#15703F", "on-secondary": "#ffffff", "macro-fat": "#EC4899", "danger-fg": "#A11A1A", "inverse-surface": "#27332d", "surface-variant": "#d8e6dc", "surface-default": "#FFFFFF", "brand-100": "#DCF5E5", "primary": "#006a3f", "ink-300": "#A5B3AA", "accent-300": "#FFB877", "outline": "#6e7a70", "error-container": "#ffdad6", "secondary-fixed": "#ffdcc5", "surface-dim": "#cfddd4", "accent-600": "#DC6D12", "on-secondary-container": "#683300", "accent-500": "#F58A2B", "on-secondary-fixed-variant": "#703800", "ink-900": "#14201A", "brand-900": "#124630", "secondary-container": "#ff9234", "surface-container-low": "#e9f7ed", "surface-tint": "#006d40", "macro-protein": "#3B82F6", "inverse-on-surface": "#e6f4ea", "primary-container": "#008651", "brand-600": "#1B8553", "tertiary": "#2b674a", "brand-700": "#176A44", "ok-bg": "#E8F7EE", "on-surface-variant": "#3e4a41", "on-primary-fixed-variant": "#00522f", "accent-50": "#FFF6ED", "secondary-fixed-dim": "#ffb782", "macro-fiber": "#10B981", "surface-container-highest": "#d8e6dc", "ink-100": "#E6ECE8", "warn-fg": "#8A5A00", "surface-bright": "#effdf3", "danger-bg": "#FDE8E8", "tertiary-fixed-dim": "#96d4b1", "ink-700": "#34443B" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "margin": "1rem", "space-xs": "0.25rem", "margin-lg": "3rem", "space-sm": "0.5rem", "gutter-md": "1.5rem", "space-lg": "1.5rem", "gutter": "1rem", "margin-md": "1.5rem", "space-md": "1rem", "gutter-lg": "2rem" }, "fontFamily": { "label-lg": ["Be Vietnam Pro"], "body-sm": ["Be Vietnam Pro"], "headline-lg": ["Be Vietnam Pro"], "display": ["Be Vietnam Pro"], "legal-micro": ["Be Vietnam Pro"], "body-lg": ["Be Vietnam Pro"], "headline-sm": ["Be Vietnam Pro"], "headline-lg-mobile": ["Be Vietnam Pro"], "label-sm": ["Be Vietnam Pro"], "body-md": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"], "label-md": ["Be Vietnam Pro"], "display-mobile": ["Be Vietnam Pro"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "display": ["40px", { "lineHeight": "48px", "fontWeight": "700" }], "legal-micro": ["10px", { "lineHeight": "14px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "display-mobile": ["30px", { "lineHeight": "38px", "fontWeight": "700" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-default/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(20,32,26,0.06)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-8"><a class="flex items-center gap-3 focus:outline-none" data-path="dashboard" href="#"><img alt="NutriCook Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZHhzgLb7HfBYJUJSVc_KzIsDuc71soJtwJZPK0ebbLwp1fdDAFbNPgPFoVkoDyphbaqg6wjB4ea1LG5IXEzgb9lBLh_7VXm0e5lCe2AEFqFQVQbcKcKEj4V2gNRRSJBuoLWFHvaLRTrG0NDy5NX-cAlBiWGmLFatPZfjwXKvM4F1hi_s-dqw-U4ptzuUVDdK_QZj2RGw1TvNR6NnCV796HpFsxOVR905Q_p2jRvHXUDYICxSHM8Ya"/><span class="font-headline-sm text-headline-sm font-bold text-brand-900 tracking-tight">NutriCook</span></a><nav class="hidden lg:flex items-center gap-1" data-active-classes="bg-brand-50 text-brand-700 font-label-lg text-label-lg rounded-xl"><a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-xl transition-all" data-path="dashboard" href="#">Tổng quan</a><a aria-current="page" class="px-4 py-2 transition-all bg-brand-50 text-brand-700 font-label-lg text-label-lg rounded-xl" data-path="meal-plan" href="#">Thực đơn tuần</a><a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-xl transition-all" data-path="recipes" href="#">Công thức</a><a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-xl transition-all" data-path="shop" href="#">Đi chợ &amp; Nguyên liệu</a><a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-xl transition-all" data-path="journal" href="#">Nhật ký</a></nav></div><div class="flex items-center gap-3"><button aria-label="Thông báo" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-accent-500 ring-2 ring-surface-default"></span></button><a class="h-11 px-3.5 flex items-center gap-2 rounded-xl bg-accent-50 text-accent-600 hover:bg-accent-100 hover:text-on-surface transition-all font-label-md text-label-md" data-path="shop" href="#"><span class="material-symbols-outlined text-[20px]">shopping_cart</span><span class="font-label-md text-label-md font-semibold text-accent-600">2 món</span></a><div class="flex items-center gap-3 pl-2"><div class="flex items-center gap-2.5 py-1 px-2 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-brand-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXfeojqDeQNF_rpSc8IorB41No5McXcGeNv5uLbE9ulZNQeNtOUzyw8gLiriJHekrjJSzByTlRDCiFkxvRkul8KfH47DYfZwy4nKQhirgTAQWvvvjw_OTAt6VoL7MbxHVCtHQxwv8hN1QecI0WORT56bocT6Bg_1nBSL2Pvy5Bku2o-cPcUBfBxLt4qSs6ihjzjq6eq3gZJGhXREK4ly0pNrU9r8Jh5ZuJEGA0xslEhvxiVRQ20bqg"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-ink-900 leading-none">Lan Nguyễn</span><span class="font-legal-micro text-legal-micro text-brand-600 mt-0.5">Gói Sống Khỏe</span></div><span class="material-symbols-outlined text-[18px] text-ink-500 hidden md:inline-block">expand_more</span></div></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Decorator -->
+<div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6 pb-20">
+<div class="absolute -top-10 left-1/3 w-96 h-96 bg-brand-200/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-20 right-10 w-80 h-80 bg-accent-100/50 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- Page Breadcrumb & Context Flag -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-brand-800">
+<span class="material-symbols-outlined text-[16px] text-brand-600" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+          Kế hoạch Dinh dưỡng Cá nhân hóa
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-ok-bg text-ok-fg font-label-sm text-label-sm">
+<span>✓</span> Thuật toán cân bằng vi chất v4.2
+        </span>
+</div>
+<!-- Quick Switcher Bar -->
+<div class="flex items-center gap-2 bg-surface-default shadow-sm p-1.5 rounded-2xl">
+<button class="w-9 h-9 flex items-center justify-center rounded-xl text-ink-700 hover:bg-surface-container-low transition-colors" id="btn-prev-week" title="Tuần trước">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<div class="px-3 py-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-brand-600">date_range</span>
+<span class="font-headline-sm text-headline-sm text-ink-900 tracking-tight">Thực đơn tuần: 20 – 26 Tháng 10, 2026</span>
+</div>
+<button class="w-9 h-9 flex items-center justify-center rounded-xl text-ink-700 hover:bg-surface-container-low transition-colors" id="btn-next-week" title="Tuần tiếp theo">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Target Specs & Action Toolbar -->
+<div class="bg-surface-default rounded-2xl p-5 shadow-sm mb-8 flex flex-col xl:flex-row xl:items-center justify-between gap-6">
+<!-- Target metrics summary -->
+<div class="flex flex-col sm:flex-row sm:items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-brand-600 text-[26px]">track_changes</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-ink-900">Mục tiêu ngày: 1.650 kcal</span>
+<span class="px-2 py-0.5 rounded-md bg-brand-100 text-brand-700 font-label-sm text-label-sm">±5% chuẩn</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 font-body-sm text-body-sm text-ink-500">
+<span class="flex items-center gap-1 text-ink-700">
+<span class="material-symbols-outlined text-[16px] text-brand-600">health_and_safety</span>
+              Giảm mỡ lành mạnh
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-macro-carb">science</span>
+              Hạn chế Natri (&lt; 1.500 mg)
+            </span>
+<span>•</span>
+<span class="text-ok-fg">Cá nhân hóa theo hồ sơ: Lan Nguyễn</span>
+</div>
+</div>
+</div>
+<!-- Action Button Group -->
+<div class="flex flex-wrap items-center gap-3">
+<button class="h-11 px-4 flex items-center gap-2 rounded-xl bg-surface-muted hover:bg-surface-container text-ink-700 font-label-lg text-label-lg transition-all active:scale-95" id="btn-regenerate">
+<span class="material-symbols-outlined text-[20px] text-brand-600 group-hover:rotate-180 transition-transform">autorenew</span>
+<span>Tạo lại thực đơn thông minh</span>
+</button>
+<button class="h-11 px-4 flex items-center gap-2 rounded-xl bg-surface-muted hover:bg-surface-container text-ink-700 font-label-lg text-label-lg transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px] text-ink-500">bookmark</span>
+<span>Lưu mẫu thực đơn</span>
+</button>
+<a class="h-11 px-5 flex items-center gap-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-on-primary font-label-lg text-label-lg shadow-sm transition-all transform hover:-translate-y-0.5 active:translate-y-0" data-path="shop" href="#">
+<span class="material-symbols-outlined text-[20px]">shopping_cart_checkout</span>
+<span>Tạo danh sách mua sắm cả tuần →</span>
+</a>
+</div>
+</div>
+<!-- Main Workspace Layout: Weekly Table (Left 9 cols) + Side Drawer / Insights (Right 3 cols) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+<!-- 7-DAY SCHEDULE MATRIX -->
+<div class="xl:col-span-9 bg-surface-default rounded-3xl p-4 sm:p-6 shadow-sm overflow-hidden flex flex-col gap-6">
+<!-- Table Scroll Container -->
+<div class="w-full overflow-x-auto pb-4 custom-scroll">
+<div class="min-w-[1040px] flex flex-col gap-5">
+<!-- HEADER ROW: 7 DAYS -->
+<div class="grid grid-cols-7 gap-3">
+<!-- Mon -->
+<div class="flex flex-col items-center justify-center p-3 rounded-2xl bg-brand-50 text-brand-900 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 inset-x-0 h-1 bg-brand-500"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-brand-700">Thứ 2</span>
+<span class="font-headline-sm text-headline-sm font-bold">20/10</span>
+<span class="font-legal-micro text-legal-micro text-ink-500 mt-0.5">Hôm nay</span>
+</div>
+<!-- Tue -->
+<div class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-muted text-ink-700">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-ink-500">Thứ 3</span>
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">21/10</span>
+<span class="font-legal-micro text-legal-micro text-ink-300 mt-0.5">Kế hoạch</span>
+</div>
+<!-- Wed -->
+<div class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-muted text-ink-700">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-ink-500">Thứ 4</span>
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">22/10</span>
+<span class="font-legal-micro text-legal-micro text-ink-300 mt-0.5">Kế hoạch</span>
+</div>
+<!-- Thu -->
+<div class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-muted text-ink-700">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-ink-500">Thứ 5</span>
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">23/10</span>
+<span class="font-legal-micro text-legal-micro text-ink-300 mt-0.5">Kế hoạch</span>
+</div>
+<!-- Fri -->
+<div class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-muted text-ink-700">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-ink-500">Thứ 6</span>
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">24/10</span>
+<span class="font-legal-micro text-legal-micro text-ink-300 mt-0.5">Kế hoạch</span>
+</div>
+<!-- Sat -->
+<div class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-muted text-ink-700">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-ink-500">Thứ 7</span>
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">25/10</span>
+<span class="font-legal-micro text-legal-micro text-accent-600 mt-0.5">Cuối tuần</span>
+</div>
+<!-- Sun -->
+<div class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-muted text-ink-700">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-ink-500">Chủ Nhật</span>
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">26/10</span>
+<span class="font-legal-micro text-legal-micro text-accent-600 mt-0.5">Cuối tuần</span>
+</div>
+</div>
+<!-- ROW 1: BỮA SÁNG (~400 kcal) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between px-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-macro-carb"></span>
+<span class="font-label-lg text-label-lg text-ink-900 font-bold uppercase tracking-wider">Bữa Sáng</span>
+<span class="text-ink-500 font-body-sm text-body-sm">· Mục tiêu ~400 kcal</span>
+</div>
+<span class="font-legal-micro text-legal-micro text-ink-500">Kéo thả để sắp xếp</span>
+</div>
+<div class="grid grid-cols-7 gap-3">
+<!-- T2 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A clean top-down food photo of rolled oats porridge garnished with organic banana slices, chia seeds, and light almond milk in a ceramic bowl with soft natural window morning lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7uYpyNndf7PCh70p_9hzlVFM2irMaB0K2cHmC-OZoTRHos9XYJpShzbYgViK1s3v5oXWjrw2DN13QJ7pX4aNKjuIF9C8eIwWSnw7Q0a3Hb_E9xtNsXjXQdCB4ChmG4B1RblnOH8MVly51xmDzWMzQLhO3LSMoYFigrVFkB6ViMrAeb7nZW2FFZpIt6nXQF1kjivLNmULFpvGrDwrXw_0ox9SkJchwCizdePqO1Q2af4Tq32SM23d5"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-brand-700 hover:bg-surface-default flex items-center justify-center transition-colors" title="Ghim món này">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Yến mạch sữa hạt chuối">Yến mạch sữa chuối</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-macro-carb/15 text-macro-carb font-label-sm text-label-sm font-semibold">380 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors" title="Đổi món khác">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T3 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Vietnamese chicken breast pho in clear gentle broth, thin rice noodles, fresh scallions, culantro herbs in a white minimalist bowl, bright natural daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC100myxNPVFm5zc3gKEAvQJZarXkHjbhs8UwlVCjGi4OvLodaESawvZRBnqumzJmKJOmQ9UOD3-v_NSUTBxKgeRQdQEtp2ZW_cjxnZ3Vr2SSox44ijXchBDV55HDMhfyAnn36tOxurnuUrivywOVGISkEcJsWiA5tLMVKNZH6s7CuZixvPC572FOLNtY3DJ_hIk0-ZaUOFpxc1lQkNv-pjoTnZChnFOj52HtDFyGy93Dq_HK9k5rCL"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 hover:bg-surface-default flex items-center justify-center transition-colors" title="Ghim món">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Phở gà ức nước trong ít muối">Phở gà ức ít muối</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">420 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors" title="Đổi món khác">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T4 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Toasted sourdough bread topped with creamy sliced avocado and sunny side up organic egg with fresh microgreens on white plate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2PV3Kwn0I8yBdNO5w-j-O-ZUYwnElkp9b1wsjqVQ2jfDsbacq3kpck1PHQOLUG4iymNmmn-RrigfIw9REORbbcbs0SNlj1yuFgJnje_NXZcdALnCoea7osl5SrQ6gbdXrcZWI7iphcx92QZTeo1tICPy6-6R_P49A-_iFeNbfac_C3pA8hJULCWlJDWfZNNX_5ehd6MAYqeW5__QwHpe4m1w8CFAldt7J3esKTbqpwdZLZK9wgm9q"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-brand-700 hover:bg-surface-default flex items-center justify-center transition-colors" title="Đã ghim">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Bánh mì trứng ốp la bơ">Bánh mì trứng bơ</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-macro-carb/15 text-macro-carb font-label-sm text-label-sm font-semibold">390 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors" title="Đổi món">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T5 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Vibrant green detox smoothie with fresh kale, blueberries, mint leaves in a sleek glass cup beside whole chia seeds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIaPnVEUdyhBdW2RErpkZXfMzaYs1E64w3KhhONj9_BoQ6-j5ExL03d--lumTNeY_k2MAQiBBrS0HC4OcHk0V8goEB9qIhQcmpPTrdSVnIfBBOjOMfCBfSJ-JflJFbSuqwhL00L-kB_ia31iTGl9bB_eUNUfn_eiOfvwTHG8XlrFIZIv73x0isdmzz0przQ_YnDsca_KYWnAjPUYuDvMECXHUc43kWJyalFERs3Gm9sH346_PI9hOg"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 hover:bg-surface-default flex items-center justify-center transition-colors" title="Ghim món">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Smoothie cải xoăn việt quất">Smoothie kale quất</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">350 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors" title="Đổi món">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T6 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Warm traditional Vietnamese chicken and brown rice congee garnished with finely sliced ginger, fresh herbs, and cracked black pepper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTnzo-xUnRgwmZpypmsIzdlfcWa40FM_gGGPVJTa_Eq_rRpocGuXa3In3_witR0IzL6LIo2CRKgsgjr3mGGK2vu-QiBUVuqBFNKu8YFboAc7HuYenVouCyP9WQlSlW74Y5KwLi6peCdF571vZW6L2UI16ohNhNiRMjvX-4OkTFKQNDtJeP6m0-0Kw-DFTx4OG0IwJTyKLCdi0F-vVlh2WHwubxbqdTj2QOsQoNy5m4yu1HfV9X8Ccz"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Cháo gạo lứt ức gà nấm">Cháo lứt gà nấm</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">375 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T7 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Golden fluffy banana whole wheat pancakes served with organic Greek yogurt and fresh mixed berries on a pastel plate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPknotL6ddRg3jrkJArCgWECqDPXg3EIm89ybitzHV5Ig0WYNLQIXzVVc8FMAdpFxx1iiAqGs2e3Eg0GNMl5Q_twOkfW7-zlzhGYilARfQKxEefakUl6KRQTjoXEujfD1yJEgnix8sboChBWpawwe2XcqNTTs6tcHdLq_SJNEWQTcmVMGMmKqBXE5GL0mwIfglj693x5tTj8ix4lWtaBH4lBxLKei4X6gX3qEV702taF0_wc4Tqf1B"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Pancake yến mạch chuối">Pancake yến mạch</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-macro-carb/15 text-macro-carb font-label-sm text-label-sm font-semibold">410 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CN -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Two poached eggs over sautéed spinach and multi-grain toast with roasted cherry tomatoes on a warm wooden dining table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXZcu7aBG3UNzOinUpBFTkaBNG_rDGGDzx4Pbyu-MAdKZbeiJF2jvBmLKbvHpN9NVczVqQtVcCZjW10S_QQmWJnsY3j0DEcXwPLqt3QmtchFVisLrC9uNLyUzgCf_u5hnx55c7bhIa4RnUnrdB0ucs-NMYzndknccS64bG7FokTbjrFe_6kxT0_1hB_atVaVnpjzql1pl29GEDqtk6IPg5VOSQ454mr1cDrj7ZaSa7E3FXoOC6K75A"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Trứng chần cải bó xôi">Trứng chần bó xôi</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">395 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 2: BỮA TRƯA (~550 kcal) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between px-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-macro-protein"></span>
+<span class="font-label-lg text-label-lg text-ink-900 font-bold uppercase tracking-wider">Bữa Trưa</span>
+<span class="text-ink-500 font-body-sm text-body-sm">· Mục tiêu ~550 kcal</span>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-3">
+<!-- T2 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Pan-seared Atlantic salmon fillet with crispy golden skin, drizzled with delicate dill lemon reduction and tender asparagus spears on a rustic ceramic plate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKr7wRAnn6bGHL6vcFAoiuARLzDo6rf7EV1wmEYWxKqevD8nwwTibVvf04lbfHxcVIXjnjS72nAcsf7mHqee7ZZod2rkvT8RRvSrodzW7gRTeKArShOeciv90r5fLgKv37phbxMs3k48kQFgnI88xYv0IbZ8PS0d2886hij3abJbOgDX5cgoXupgXuYt7inoNc531KqOoTmFMUCMAqRU74SkL_ANiL7AuCAWysgEw0jpHWNxFu4Jg0"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Cá hồi áp chảo sốt chanh">Cá hồi áp chảo chanh</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">520 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T3 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A balanced fitness meal box featuring steamed brown rice, diced tender chicken breast stir-fried with colorful bell peppers and broccoli." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW5fbzmuTOl77JMBxf5Z7NdoP8A6miSzpaSpZ14xRC4k_SivSBSmvTXHxdroZbhb2AtlMc1anjjyTY7A8garfEklLtVdBcctERnX6uHkRzVqVmAi_pwvEFMkjW1u6Ym0W8a8xcwaBsYd6LwC2pcA_J9EN4z3hTgz4UfE3uO4OE3GFuTNh52Awuox4cfDHtXgKoAF_SaikQmw92e7Tz2R6_RWJgylPfAq84cOdarJ9_edr-06dHa67E"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Cơm gạo lứt ức gà xào ớt chuông">Lứt ức gà ớt chuông</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-macro-protein/15 text-macro-protein font-label-sm text-label-sm font-semibold">540 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T4 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Vietnamese mackerel fishcake noodle soup with fresh celery, tomatoes, herbs and light broth in ceramic bowl." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuWs7Ur_Ah2HniiN6XQHx9Uib8sanVIy485rPtqy7CBM9gxP3VoyH1RC8lxoNR_STpicSxHSKPOxIH4ZCUC-NGZdzbMlJXogDI8WAqNTHLQs5i9fG5Xr_L3AkTDiJpU49MnSSQ5XqgRC1minC071xKDtes5N4yUvfPeR-qWAJe0x0geNfcqofc0G-UMdTDzjK9VT508Qj_ueuU3axDz-M-GdBzLa9bn3g81eHcGXhooIBllYSs4y6v"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Bún chả cá thu nấu ngót">Bún chả cá nấu ngót</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">510 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T5 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tender grilled lean beef flank steak served beside vibrant rainbow quinoa salad with cucumber and roasted pumpkin seeds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGUDJHMnfXu7FvFPlmw3U8kXGdYoaIM3bIV800egDIL4FY_4tmgO0PRmevpZ8RYceV3-fDwjKHTtk7YCyLa_3ALE5aP1UjJTy-56N-VhezZrZrw63xjgu1Sp0_VHp1SxYB3JRy1TAqneNXrZYH8GazSbY6NLfDWe05p9BB2of2J7cBnlhmONuz4fOv2_ELdgI88fd-fawItA9f04LqE3tgILi0fM37r01eeoY8ttVHiVkJLoJ2Q5Ze"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Bò áp chảo salad quinoa">Bò áp chảo salad quinoa</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">560 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T6 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Light Vietnamese chicken glass noodle soup with fresh wood ear mushrooms, fragrant cilantro, and shredded poached chicken in clear broth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9IuGvicd5EuyYpSFW0sUwVWqXGRHjYIoZPHv6ltw6Rmmehl-ncHA4Rk_RS3du-_RDF455A_JCsWft_20IJ5d1X9OOlQIzo4Wy9Klwfro2Zff-iv9AiKjyjeBbIh9AEKJoee0lYSObIZEzZjGOBOCWTstQdj9pzUasJ2oMbVSJbINW6WCzuZWE4fpuBVy457QNbniH9fw0UGEojtikh1eLtDb4h5WQV2_AMGIKVs-sHCQClLvHwjBQ"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Miến gà nấu nấm đông cô">Miến gà nấu nấm</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">495 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T7 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Vietnamese ginger braised sea bass fillet served with steamed jasmine brown rice and fresh boiled seasonal greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHSpVzsCdSwX6vnpzmuRgG59WC_f6O1CHXncLOhJolKoCj9Z_SoqxWfgRm9R712Bms7aUiihj6cuTP5TPN0UJRAOzw9DlAZHdf53PKY_C87JRdKGW3pC1LFp91y-SsBn_dce1tRSm0hMJPt624hCaR4a_dKOISa3reSS3m4WcYj9ARPktUdZh8akJ97BWiH_iEWz8M70-YZ0znbhWRm4wKPdyXnT8Q18wB6GoQuMbM1pDJIg6TXz6q"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Cá chẽm hấp gừng hành">Cá chẽm hấp gừng</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">530 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CN -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Crispy golden pan-fried tofu with mushroom black pepper sauce served with red wild rice and steamed edamame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi7PmAQdymtjiHI81p3g36ni_T8Bjdr4kVxRd0S75xtGxq3lDfk6gUuc8gKZkOvjHoeGRGWX9WhiJnSvHj4iZL4EEIJjNcoGRW61ngfkmFxblbYvdRksDKNJVJEK80_izF_OrWNCr4CFYvQ3JZbkfRJMJlTFQfzpKHD0BUnWDCzrUHJWo0FpHmAlI16kM9H0lBfP1n3_iMnE_13hRjbBrNiz2RrjAgX7P9b-nocPWUlVBHz86pkxLX"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Đậu hũ sốt nấm hạt sen">Đậu hũ sốt nấm sen</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">515 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 3: BỮA TỐI (~500 kcal) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between px-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-macro-fiber"></span>
+<span class="font-label-lg text-label-lg text-ink-900 font-bold uppercase tracking-wider">Bữa Tối</span>
+<span class="text-ink-500 font-body-sm text-body-sm">· Mục tiêu ~500 kcal</span>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-3">
+<!-- T2 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Traditional Vietnamese savory sweet pumpkin soup with minced shrimp, fresh cilantro, served with a small bowl of steamed brown rice." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwDbx6QR7yhCsul1myxI7kvYO1wxqe9k0xhjxe-fpab90zyh7kcaFV7BSsah9Dw1TSjnktbtD7gAK9KyeIC6QgNhm4idpFj92P3W1cfegtBx2x-GGtOzponYYPIgzyArnTZA0pk6_vKp9qOQdKUxboNS1jrTulrauBDZ7uPmZC8yr9_A2GXbp-MI4ytm_t--Tb_6lFoMandRJZuJegXNf7_MSYkWzci2jWgKEsWPIovL2l1OUtmjkY"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Canh bí đỏ tôm + cơm lứt">Canh bí đỏ tôm + lứt</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">480 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T3 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Mekong Delta sour soup with snakehead fish fillets, fresh okra, pineapple, bean sprouts, and mint leaves, subtle steam rising." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSPmG1WeHA_8jthQ9cOUN7RsQTZHeJ1t8cWCm5wNt5VwuehHAmeI59BJuNMxwx0QW7_Y6qFk0OIWylcELM--r9tEFMYR40PVMzapWHzVn1IhD0icX1WbGTPMyi6WYZMY50_Fy_Vh6H_KaueopbFTi30Ug0zP5mN9Wkd0C5EubVNWCghmG-WwLnAPiTwwV70ktR4_f0a1Gla_qXG9zywj4zoavY5o2pfmZXBkKCehpJecbP4kGg12cc"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Canh chua cá lóc miền Tây">Canh chua cá lóc</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">460 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T4 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tender tofu cubes simmered in fresh tomato reduction with shiitake mushrooms and chopped scallions on a modern grey dish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo0v2TjBgpqu8Os1nu3dlaLZhA2BXAHPf1uHKbNVSl88dD3eubZFG18AsNxZOxhSXjU_PJvqCaZLGvFD1sSctbVkjQ-_oE6jy1huIgFhuKbU8YCu0PQXFtjUuifHs3ZTy5Od0gzGWNpmSy-SYeZOx1-0Y7a1zNqkA0LeIPoQciML8a3hfLddnDhVZFAXcD8cZvERFcMJDJoeWld5RzcwN1qu8AQ8UBLhMwZAZM4HjKtrnvrryhfd8k"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Đậu sốt cà chua nấm">Đậu sốt cà nấm</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">450 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T5 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Fresh steamed squid with lemon grass and sweet baby corn beside light dipping sauce with fresh herbs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8aELtBA01K_PQuO8FE9azo3sf2DmTe70xduIRKFEx7_qBgqFt6-54mKoQxrKjK8-gGZXMZDCU_dkTMzgfiSpPwS4jGkI42Vfmj6TP3lvGH4NogaZf734A7yRDSSodF8C8T3n_L-DmE2bQ2i2FiYooN_98Fv3D6s83_baXsVR06lidbiQ_kLaH2ENbsjKug2Wi_A11sYP271ulczU9WRfchKTEtHXefxPFBJwHgnrv19xfqUZhDMiu"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Mực hấp sả + rau củ luộc">Mực hấp sả rau củ</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">470 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T6 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Light healthy vegetable hotpot bowl with organic tofu, enoki mushrooms, baby bok choy and sweet lotus roots in comforting broth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-V1Vk5bWULDnsKfz64GvYNyZZx2cCIpVhrcQKoR2AXz5Z18IaboU8tCsWr1aQsj4R3Jf75ZB2WWJ1n0vGbWEHSTrmQgD8AYgy_t02yXvFUygYFhnILtJ6xOqdBzROwJEmtch7WeVAcceZv--h_Nnh5beo7oE81KpL-J2FJ1IOId3PDRGebG3ULg_Hk2wbTOVdAUanoCcHl0FYqxrLridHiiQDadk8epRfqz_-U4c2xoJyHW9i3v1A"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Canh nấm đậu hũ hạt sen">Canh nấm hạt sen</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">480 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- T7 -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Steamed sea shrimp served with fresh water spinach stir-fried with fragrant garlic and mild olive oil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmYq-qNzJy-Pzn2ZeXCE1ciwYy4Sm9esj0fA7zXXfvppeG7ZBtwUv-TW3BqIoVamdHXUL5pmqT5TG3rZtOPAaATQRc38TZSffo_xxE41zkMpfnPJzOTfYGQKVc5qRGs7_rGRNWusz1smEMDFV8nzertwp_Wf08mxQRDuId4ZVq9ZCvHKxN2yLOfFFEXnlqhitNuhOL29LyOFk9wVtpx3jh4rMhyCcrWvJf5U8Nnswk6v4elUGW36eL"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-ink-300 hover:text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Tôm biển hấp + rau muống">Tôm hấp rau muống</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">455 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CN -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-grab">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2 bg-surface-sunken">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Savory braised lean pork tenderloin with quail eggs in a light caramelized coconut broth, garnished with fresh chili slices." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzdXfHKInZFU1EYKqVi9hMqWnSEPuhLcyjW35QfZnZEXkAD447jgToI8Dw-W7VHJ5S8r5EvZxuN5ul2spAFUGpdGRrNu-fMF1OF2SGqwEvmra-nAlpDE23IFzgwWVQJHAzwW4pHHBPspL-VL-zLcVoaVTQDIsRABP_KIgxUvyUuCiiem1_W5877tq9WGV9sp8KptSwu7FIvzkKoNDG03KNyVb3c2gboQfywJvaQLCvnpuYrODhqIdc"/>
+<button class="absolute top-1.5 right-1.5 w-7 h-7 rounded-lg bg-surface-default/80 backdrop-blur text-brand-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+</button>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold text-ink-900 line-clamp-1 mb-1" title="Thịt nạc kho trứng cút lạt">Thịt nạc kho cút lạt</h4>
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 font-label-sm text-label-sm font-semibold">490 kcal</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-ink-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 4: BỮA PHỤ (~150 - 200 kcal) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between px-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-macro-fat"></span>
+<span class="font-label-lg text-label-lg text-ink-900 font-bold uppercase tracking-wider">Bữa Phụ Xế Chiều</span>
+<span class="text-ink-500 font-body-sm text-body-sm">· Mục tiêu ~150 – 200 kcal</span>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-3">
+<!-- T2 -->
+<div class="bg-surface-muted rounded-2xl p-2.5 flex flex-col justify-between hover:bg-brand-50/60 transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-600 text-[20px]">nutrition</span>
+<span class="font-label-sm text-label-sm font-medium text-ink-900 truncate">Sữa chua Hy Lạp</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="font-label-sm text-label-sm text-ink-500">Hạt chia</span>
+<span class="font-label-sm text-label-sm font-bold text-brand-700">160 kcal</span>
+</div>
+</div>
+<!-- T3 -->
+<div class="bg-surface-muted rounded-2xl p-2.5 flex flex-col justify-between hover:bg-brand-50/60 transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-macro-carb text-[20px]">nutrition</span>
+<span class="font-label-sm text-label-sm font-medium text-ink-900 truncate">Táo lát giòn</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="font-label-sm text-label-sm text-ink-500">Bơ lạc</span>
+<span class="font-label-sm text-label-sm font-bold text-brand-700">180 kcal</span>
+</div>
+</div>
+<!-- T4 -->
+<div class="bg-surface-muted rounded-2xl p-2.5 flex flex-col justify-between hover:bg-brand-50/60 transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-macro-fiber text-[20px]">nutrition</span>
+<span class="font-label-sm text-label-sm font-medium text-ink-900 truncate">Hạnh nhân sấy</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="font-label-sm text-label-sm text-ink-500">15 hạt</span>
+<span class="font-label-sm text-label-sm font-bold text-brand-700">145 kcal</span>
+</div>
+</div>
+<!-- T5 -->
+<div class="bg-surface-muted rounded-2xl p-2.5 flex flex-col justify-between hover:bg-brand-50/60 transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">nutrition</span>
+<span class="font-label-sm text-label-sm font-medium text-ink-900 truncate">Bưởi da xanh</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="font-label-sm text-label-sm text-ink-500">3 múi</span>
+<span class="font-label-sm text-label-sm font-bold text-secondary">210 kcal</span>
+</div>
+</div>
+<!-- T6 -->
+<div class="bg-surface-muted rounded-2xl p-2.5 flex flex-col justify-between hover:bg-brand-50/60 transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-600 text-[20px]">nutrition</span>
+<span class="font-label-sm text-label-sm font-medium text-ink-900 truncate">Sữa đậu nành</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="font-label-sm text-label-sm text-ink-500">Ít đường</span>
+<span class="font-label-sm text-label-sm font-bold text-brand-700">135 kcal</span>
+</div>
+</div>
+<!-- T7 -->
+<div class="bg-surface-muted rounded-2xl p-2.5 flex flex-col justify-between hover:bg-brand-50/60 transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-macro-carb text-[20px]">nutrition</span>
+<span class="font-label-sm text-label-sm font-medium text-ink-900 truncate">Khoai lang vàng</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="font-label-sm text-label-sm text-ink-500">100g nướng</span>
+<span class="font-label-sm text-label-sm font-bold text-brand-700">155 kcal</span>
+</div>
+</div>
+<!-- CN -->
+<div class="bg-surface-muted rounded-2xl p-2.5 flex flex-col justify-between hover:bg-brand-50/60 transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-600 text-[20px]">nutrition</span>
+<span class="font-label-sm text-label-sm font-medium text-ink-900 truncate">Sữa chua nếp cẩm</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="font-label-sm text-label-sm text-ink-500">Tự làm</span>
+<span class="font-label-sm text-label-sm font-bold text-brand-700">160 kcal</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 5: BOTTOM DAILY SUMMARY / COMPLIANCE -->
+<div class="pt-4 border-t border-ink-100/60 flex flex-col gap-3">
+<div class="flex items-center justify-between px-2">
+<span class="font-label-lg text-label-lg text-ink-900 font-bold">Tổng Calo Ngày &amp; Độ Phù Hợp Mục Tiêu</span>
+<span class="font-label-sm text-label-sm text-ink-500">Chuẩn: 1.650 kcal</span>
+</div>
+<div class="grid grid-cols-7 gap-3">
+<!-- T2 Summary -->
+<div class="p-3 rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">1.640</span>
+<span class="w-5 h-5 rounded-full bg-ok-bg text-ok-fg text-[12px] flex items-center justify-center font-bold">✓</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-brand-500 h-full rounded-full" style="width: 99.4%"></div>
+</div>
+<span class="font-legal-micro text-legal-micro text-ok-fg font-semibold">-10 kcal (-0.6%)</span>
+</div>
+<!-- T3 Summary -->
+<div class="p-3 rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">1.670</span>
+<span class="w-5 h-5 rounded-full bg-ok-bg text-ok-fg text-[12px] flex items-center justify-center font-bold">✓</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-brand-500 h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="font-legal-micro text-legal-micro text-ok-fg font-semibold">+20 kcal (+1.2%)</span>
+</div>
+<!-- T4 Summary -->
+<div class="p-3 rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">1.625</span>
+<span class="w-5 h-5 rounded-full bg-ok-bg text-ok-fg text-[12px] flex items-center justify-center font-bold">✓</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-brand-500 h-full rounded-full" style="width: 98.4%"></div>
+</div>
+<span class="font-legal-micro text-legal-micro text-ok-fg font-semibold">-25 kcal (-1.5%)</span>
+</div>
+<!-- T5 Summary (Tolerance warning +2.4%) -->
+<div class="p-3 rounded-2xl bg-warn-bg/70 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">1.690</span>
+<span class="w-5 h-5 rounded-full bg-warn-bg text-warn-fg text-[12px] flex items-center justify-center font-bold">⚠</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-macro-carb h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="font-legal-micro text-legal-micro text-warn-fg font-semibold">+40 kcal (+2.4%)</span>
+</div>
+<!-- T6 Summary -->
+<div class="p-3 rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">1.635</span>
+<span class="w-5 h-5 rounded-full bg-ok-bg text-ok-fg text-[12px] flex items-center justify-center font-bold">✓</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-brand-500 h-full rounded-full" style="width: 99.0%"></div>
+</div>
+<span class="font-legal-micro text-legal-micro text-ok-fg font-semibold">-15 kcal (-0.9%)</span>
+</div>
+<!-- T7 Summary -->
+<div class="p-3 rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">1.650</span>
+<span class="w-5 h-5 rounded-full bg-ok-bg text-ok-fg text-[12px] flex items-center justify-center font-bold">✓</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-brand-500 h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="font-legal-micro text-legal-micro text-ok-fg font-semibold">Chuẩn xác 100%</span>
+</div>
+<!-- CN Summary -->
+<div class="p-3 rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">1.660</span>
+<span class="w-5 h-5 rounded-full bg-ok-bg text-ok-fg text-[12px] flex items-center justify-center font-bold">✓</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-brand-500 h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="font-legal-micro text-legal-micro text-ok-fg font-semibold">+10 kcal (+0.6%)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SIDE SUMMARY DRAWER / ANALYTICS WIDGET -->
+<div class="xl:col-span-3 flex flex-col gap-6">
+<!-- Nutrition Aggregate Card -->
+<div class="bg-surface-default rounded-3xl p-6 shadow-sm flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-ink-900 font-bold">Tổng hợp dinh dưỡng tuần</h3>
+<span class="material-symbols-outlined text-brand-600">pie_chart</span>
+</div>
+<!-- Average Calories Hero Badge -->
+<div class="p-4 rounded-2xl bg-brand-50 flex items-center justify-between">
+<div>
+<span class="font-legal-micro text-legal-micro uppercase tracking-wider text-brand-700 font-semibold">Trung bình tuần</span>
+<div class="font-display text-display text-brand-900 font-extrabold leading-tight">1.652 <span class="font-headline-sm text-headline-sm font-normal text-brand-700">kcal</span></div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-ok-bg text-ok-fg font-label-sm text-label-sm font-semibold">
+                ✓ Đạt 99.8%
+              </span>
+<p class="font-legal-micro text-legal-micro text-ink-500 mt-1">So với mục tiêu 1.650</p>
+</div>
+</div>
+<!-- Circular Macro Ratio Visualization -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between font-label-md text-label-md text-ink-900">
+<span>Tỉ lệ cân bằng vĩ mô (Macro)</span>
+<span class="font-legal-micro text-legal-micro text-ink-500">Chuẩn Healthy</span>
+</div>
+<!-- Concentric / Segmented Visual Bar -->
+<div class="w-full h-3 rounded-full overflow-hidden flex bg-surface-sunken">
+<div class="bg-macro-protein h-full" style="width: 25%" title="Đạm: 25%"></div>
+<div class="bg-macro-carb h-full" style="width: 50%" title="Tinh bột hấp thu chậm: 50%"></div>
+<div class="bg-macro-fat h-full" style="width: 25%" title="Chất béo tốt: 25%"></div>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-1">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-macro-protein"></span>
+<span class="font-legal-micro text-legal-micro text-ink-500">Đạm (Protein)</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-ink-900 mt-0.5">25% (103g)</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-macro-carb"></span>
+<span class="font-legal-micro text-legal-micro text-ink-500">Carb lứt/chậm</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-ink-900 mt-0.5">50% (206g)</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-macro-fat"></span>
+<span class="font-legal-micro text-legal-micro text-ink-500">Béo không bão hòa</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-ink-900 mt-0.5">25% (46g)</span>
+</div>
+</div>
+</div>
+<!-- Micro Nutrient / Sodium Guard -->
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-brand-600">shield_with_heart</span>
+<span class="font-label-md text-label-md font-bold text-ink-900">Trung bình Natri (Muối)</span>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-ok-bg text-ok-fg font-label-sm text-label-sm font-semibold">1.480 mg/ngày</span>
+</div>
+<p class="font-body-sm text-body-sm text-ink-500">
+              Thấp hơn ngưỡng trần 1.500 mg. Đạt chuẩn hiệp hội tim mạch &amp; huyết áp quốc tế.
+            </p>
+</div>
+<!-- Conversion & Grocery CTA -->
+<div class="flex flex-col gap-3 pt-2">
+<div class="flex items-center justify-between text-ink-700">
+<span class="font-body-sm text-body-sm">Tổng nguyên liệu cần chuẩn bị:</span>
+<span class="font-headline-sm text-headline-sm font-bold text-ink-900">32 món</span>
+</div>
+<div class="p-3 rounded-xl bg-accent-50 text-accent-600 flex items-center justify-between font-label-md text-label-md">
+<span>Dự toán kinh phí tuần:</span>
+<span class="font-bold">~ 945.000 ₫</span>
+</div>
+<a class="w-full h-12 rounded-xl bg-accent-500 hover:bg-accent-600 text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-all transform active:scale-98" data-path="shop" href="#">
+<span class="material-symbols-outlined text-[20px]">local_mall</span>
+<span>Tạo danh sách mua sắm (32 món)</span>
+</a>
+<button class="w-full py-2.5 text-center font-label-sm text-label-sm text-ink-500 hover:text-brand-700 flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>In thực đơn dán tủ lạnh (PDF A4)</span>
+</button>
+</div>
+</div>
+<!-- Smart Recommendation Helper Module -->
+<div class="p-5 rounded-3xl bg-surface-container-high/60 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-brand-800 font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[20px] text-brand-600">tips_and_updates</span>
+<span>Gợi ý chuẩn bị trước (Meal Prep)</span>
+</div>
+<p class="font-body-sm text-body-sm text-ink-700">
+            Hãy ngâm sẵn gạo lứt và ướp ức gà vào tối Chủ Nhật để tiết kiệm 45 phút nấu nướng cho các bữa trưa đầu tuần.
+          </p>
+</div>
+</div>
+</div>
+<!-- Medical Disclaimer Note (Bottom compliance) -->
+<div class="mt-12 p-4 rounded-2xl bg-warn-bg/90 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+<span class="material-symbols-outlined text-warn-fg text-[24px] shrink-0">medical_services</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-warn-fg font-bold">Cảnh báo y tế và khuyến nghị cá nhân hóa</span>
+<p class="font-body-sm text-body-sm text-warn-fg">
+          Thực đơn tuần này được tối ưu tự động dựa trên chỉ số BMI và mục tiêu giảm mỡ, hạn chế natri của tài khoản Lan Nguyễn. Nếu bạn đang mang thai, cho con bú hoặc đang điều trị bệnh mạn tính, vui lòng tham vấn ý kiến chuyên gia dinh dưỡng hoặc bác sĩ điều trị trước khi áp dụng chế độ ăn này.
+        </p>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Script for Swapping & Demo feedback -->
+<script>
+    (function() {
+      // Toggle Pin State
+      document.querySelectorAll('button[title*="Ghim"], button[title*="ghim"]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const icon = btn.querySelector('.material-symbols-outlined');
+          if (icon) {
+            const isPinned = btn.classList.contains('text-brand-700');
+            if (isPinned) {
+              btn.classList.remove('text-brand-700');
+              btn.classList.add('text-ink-300');
+              icon.style.fontVariationSettings = "'FILL' 0";
+            } else {
+              btn.classList.add('text-brand-700');
+              btn.classList.remove('text-ink-300');
+              icon.style.fontVariationSettings = "'FILL' 1";
+            }
+          }
+        });
+      });
+
+      // Quick Swap Recipe Micro-interaction
+      document.querySelectorAll('button[title*="Đổi món"]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const card = btn.closest('.group');
+          if (!card) return;
+          const titleEl = card.querySelector('h4');
+          if (!titleEl) return;
+          
+          btn.classList.add('rotate-180');
+          setTimeout(() => btn.classList.remove('rotate-180'), 400);
+
+          const alternates = [
+            'Salad tôm sốt mè rang',
+            'Súp bí xanh ngô ngọt',
+            'Cá bống kho tiêu lạt',
+            'Trứng cuộn rong biển',
+            'Nấm hương xào đậu cove'
+          ];
+          const randomDish = alternates[Math.floor(Math.random() * alternates.length)];
+          titleEl.textContent = randomDish;
+          titleEl.setAttribute('title', randomDish);
+        });
+      });
+
+      // Week navigation feedback
+      const prevBtn = document.getElementById('btn-prev-week');
+      const nextBtn = document.getElementById('btn-next-week');
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          prevBtn.classList.add('scale-90');
+          setTimeout(() => prevBtn.classList.remove('scale-90'), 150);
+        });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          nextBtn.classList.add('scale-90');
+          setTimeout(() => nextBtn.classList.remove('scale-90'), 150);
+        });
+      }
+
+      // Smart regenerate simulated calculation
+      const regenBtn = document.getElementById('btn-regenerate');
+      if (regenBtn) {
+        regenBtn.addEventListener('click', () => {
+          const originalText = regenBtn.innerHTML;
+          regenBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">autorenew</span><span>Đang tính toán lại vi chất...</span>';
+          regenBtn.disabled = true;
+          setTimeout(() => {
+            regenBtn.innerHTML = originalText;
+            regenBtn.disabled = false;
+          }, 800);
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-12 mt-12 shadow-[0_-1px_4px_rgba(20,32,26,0.02)]"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-8"><div class="flex flex-col md:flex-row items-center justify-between gap-6"><div class="flex items-center gap-3"><img alt="NutriCook Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZHhzgLb7HfBYJUJSVc_KzIsDuc71soJtwJZPK0ebbLwp1fdDAFbNPgPFoVkoDyphbaqg6wjB4ea1LG5IXEzgb9lBLh_7VXm0e5lCe2AEFqFQVQbcKcKEj4V2gNRRSJBuoLWFHvaLRTrG0NDy5NX-cAlBiWGmLFatPZfjwXKvM4F1hi_s-dqw-U4ptzuUVDdK_QZj2RGw1TvNR6NnCV796HpFsxOVR905Q_p2jRvHXUDYICxSHM8Ya"/><span class="font-headline-sm text-headline-sm text-brand-900 font-bold">NutriCook</span><span class="hidden md:inline font-body-sm text-body-sm text-ink-500">— Ăn đúng sống khỏe</span></div><div class="flex flex-wrap items-center justify-center gap-6"><a class="font-body-sm text-body-sm text-ink-700 hover:text-brand-600 transition-colors" data-path="about" href="#">Về chúng tôi</a><a class="font-body-sm text-body-sm text-ink-700 hover:text-brand-600 transition-colors" data-path="methodology" href="#">Nguồn &amp; Phương pháp</a><a class="font-body-sm text-body-sm text-ink-700 hover:text-brand-600 transition-colors" data-path="privacy-terms" href="#">Điều khoản &amp; Bảo mật</a></div></div><div class="p-4 rounded-xl bg-warn-bg flex items-start gap-3"><span class="material-symbols-outlined text-warn-fg text-[20px] shrink-0 mt-0.5">medical_information</span><p class="font-body-sm text-body-sm text-warn-fg"><strong>Lưu ý y tế:</strong> Thông tin mang tính tham khảo. Hãy hỏi bác sĩ nếu bạn đang dùng thuốc hoặc có bệnh nền.</p></div><div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-ink-100"><p class="font-legal-micro text-legal-micro text-ink-500">© 2025 NutriCook Việt Nam. Nền tảng dinh dưỡng cá nhân hóa thông minh.</p><div class="flex items-center gap-4 text-ink-500 font-legal-micro text-legal-micro"><span>ISO 22000 Data Model</span><span>•</span><span>Viện Dinh Dưỡng Quốc Gia</span></div></div></div></footer></body></html>

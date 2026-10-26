@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>NutriCook - Ăn đúng sống khỏe</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed": "#301400", "brand-50": "#F0FBF4", "tertiary-container": "#458062", "on-primary-container": "#f6fff5", "background": "#effdf3", "on-surface": "#121e18", "on-primary-fixed": "#002110", "surface-muted": "#F7FAF8", "on-tertiary-container": "#f6fff6", "macro-carb": "#F59E0B", "primary-fixed": "#85f9b5", "on-background": "#121e18", "on-error-container": "#93000a", "ink-500": "#5E6F65", "surface-container": "#e3f1e7", "error": "#ba1a1a", "brand-500": "#27A468", "brand-200": "#B9EACB", "outline-variant": "#bdcabe", "inverse-primary": "#68dc9b", "primary-fixed-dim": "#68dc9b", "brand-300": "#86D8A9", "surface": "#effdf3", "warn-bg": "#FFF4D6", "surface-container-high": "#ddece2", "on-tertiary-fixed-variant": "#115136", "on-error": "#ffffff", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "secondary": "#934b00", "on-tertiary": "#ffffff", "surface-sunken": "#EEF3F0", "brand-400": "#4FBF84", "brand-800": "#155439", "tertiary-fixed": "#b1f0cc", "accent-100": "#FFE9D3", "ok-fg": "#15703F", "on-secondary": "#ffffff", "macro-fat": "#EC4899", "danger-fg": "#A11A1A", "inverse-surface": "#27332d", "surface-variant": "#d8e6dc", "surface-default": "#FFFFFF", "brand-100": "#DCF5E5", "primary": "#006a3f", "ink-300": "#A5B3AA", "accent-300": "#FFB877", "outline": "#6e7a70", "error-container": "#ffdad6", "secondary-fixed": "#ffdcc5", "surface-dim": "#cfddd4", "accent-600": "#DC6D12", "on-secondary-container": "#683300", "accent-500": "#F58A2B", "on-secondary-fixed-variant": "#703800", "ink-900": "#14201A", "brand-900": "#124630", "secondary-container": "#ff9234", "surface-container-low": "#e9f7ed", "surface-tint": "#006d40", "macro-protein": "#3B82F6", "inverse-on-surface": "#e6f4ea", "primary-container": "#008651", "brand-600": "#1B8553", "tertiary": "#2b674a", "brand-700": "#176A44", "ok-bg": "#E8F7EE", "on-surface-variant": "#3e4a41", "on-primary-fixed-variant": "#00522f", "accent-50": "#FFF6ED", "secondary-fixed-dim": "#ffb782", "macro-fiber": "#10B981", "surface-container-highest": "#d8e6dc", "ink-100": "#E6ECE8", "warn-fg": "#8A5A00", "surface-bright": "#effdf3", "danger-bg": "#FDE8E8", "tertiary-fixed-dim": "#96d4b1", "ink-700": "#34443B" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "margin": "1rem", "space-xs": "0.25rem", "margin-lg": "3rem", "space-sm": "0.5rem", "gutter-md": "1.5rem", "space-lg": "1.5rem", "gutter": "1rem", "margin-md": "1.5rem", "space-md": "1rem", "gutter-lg": "2rem" }, "fontFamily": { "label-lg": ["Be Vietnam Pro"], "body-sm": ["Be Vietnam Pro"], "headline-lg": ["Be Vietnam Pro"], "display": ["Be Vietnam Pro"], "legal-micro": ["Be Vietnam Pro"], "body-lg": ["Be Vietnam Pro"], "headline-sm": ["Be Vietnam Pro"], "headline-lg-mobile": ["Be Vietnam Pro"], "label-sm": ["Be Vietnam Pro"], "body-md": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"], "label-md": ["Be Vietnam Pro"], "display-mobile": ["Be Vietnam Pro"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "display": ["40px", { "lineHeight": "48px", "fontWeight": "700" }], "legal-micro": ["10px", { "lineHeight": "14px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "display-mobile": ["30px", { "lineHeight": "38px", "fontWeight": "700" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-default/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(20,32,26,0.06)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-8"><a class="flex items-center gap-3 focus:outline-none" data-path="dashboard" href="#"><img alt="NutriCook Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZHhzgLb7HfBYJUJSVc_KzIsDuc71soJtwJZPK0ebbLwp1fdDAFbNPgPFoVkoDyphbaqg6wjB4ea1LG5IXEzgb9lBLh_7VXm0e5lCe2AEFqFQVQbcKcKEj4V2gNRRSJBuoLWFHvaLRTrG0NDy5NX-cAlBiWGmLFatPZfjwXKvM4F1hi_s-dqw-U4ptzuUVDdK_QZj2RGw1TvNR6NnCV796HpFsxOVR905Q_p2jRvHXUDYICxSHM8Ya"/><span class="font-headline-sm text-headline-sm font-bold text-brand-900 tracking-tight">NutriCook</span></a><nav class="hidden lg:flex items-center gap-1" data-active-classes="bg-brand-50 text-brand-700 font-label-lg text-label-lg rounded-xl"><a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-xl transition-all" data-path="dashboard" href="#">Tổng quan</a><a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-xl transition-all" data-path="meal-plan" href="#">Thực đơn tuần</a><a aria-current="page" class="px-4 py-2 transition-all bg-brand-50 text-brand-700 font-label-lg text-label-lg rounded-xl" data-path="recipes" href="#">Công thức</a><a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-xl transition-all" data-path="shop" href="#">Đi chợ &amp; Nguyên liệu</a><a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-xl transition-all" data-path="journal" href="#">Nhật ký</a></nav></div><div class="flex items-center gap-3"><button aria-label="Thông báo" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-accent-500 ring-2 ring-surface-default"></span></button><a class="h-11 px-3.5 flex items-center gap-2 rounded-xl bg-accent-50 text-accent-600 hover:bg-accent-100 hover:text-on-surface transition-all font-label-md text-label-md" data-path="shop" href="#"><span class="material-symbols-outlined text-[20px]">shopping_cart</span><span class="font-label-md text-label-md font-semibold text-accent-600">2 món</span></a><div class="flex items-center gap-3 pl-2"><div class="flex items-center gap-2.5 py-1 px-2 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-brand-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXfeojqDeQNF_rpSc8IorB41No5McXcGeNv5uLbE9ulZNQeNtOUzyw8gLiriJHekrjJSzByTlRDCiFkxvRkul8KfH47DYfZwy4nKQhirgTAQWvvvjw_OTAt6VoL7MbxHVCtHQxwv8hN1QecI0WORT56bocT6Bg_1nBSL2Pvy5Bku2o-cPcUBfBxLt4qSs6ihjzjq6eq3gZJGhXREK4ly0pNrU9r8Jh5ZuJEGA0xslEhvxiVRQ20bqg"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-ink-900 leading-none">Lan Nguyễn</span><span class="font-legal-micro text-legal-micro text-brand-600 mt-0.5">Gói Sống Khỏe</span></div><span class="material-symbols-outlined text-[18px] text-ink-500 hidden md:inline-block">expand_more</span></div></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-6 w-full space-y-6">
+<!-- Breadcrumb & Top Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 font-label-md text-label-md text-ink-500 overflow-x-auto whitespace-nowrap">
+<a class="hover:text-brand-600 transition-colors" href="#">Trang chủ</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-brand-600 transition-colors" href="#">Công thức</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-brand-600 transition-colors" href="#">Canh &amp; Súp</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-ink-900 font-semibold truncate">Canh bí đỏ nấu tôm</span>
+</nav>
+<div class="flex items-center gap-2">
+<button aria-label="Thêm vào danh sách yêu thích" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-ink-700 hover:text-macro-fat hover:bg-surface-default transition-all shadow-sm" id="favorite-btn" type="button">
+<span class="material-symbols-outlined text-[22px]" id="favorite-icon">favorite</span>
+</button>
+<button aria-label="Chia sẻ công thức" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-ink-700 hover:text-brand-600 hover:bg-surface-default transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<!-- Title & Clinical Personalized Verdict Banners -->
+<div class="space-y-3">
+<div class="flex flex-wrap items-baseline gap-3">
+<h1 class="font-display text-display text-ink-900 tracking-tight">Canh bí đỏ nấu tôm tươi thanh ngọt</h1>
+<span class="font-label-md text-label-md px-3 py-1 rounded-full bg-brand-100 text-brand-800 font-semibold tracking-wide uppercase">Công thức chuẩn lâm sàng</span>
+</div>
+<!-- Verdict Badge Banner -->
+<div class="p-4 rounded-2xl bg-ok-bg text-ok-fg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-sm">
+<div class="flex items-start sm:items-center gap-3">
+<div class="w-7 h-7 rounded-full bg-brand-500 text-surface-default flex items-center justify-center shrink-0 mt-0.5 sm:mt-0 font-bold text-sm">
+            ✓
+          </div>
+<div class="font-body-md text-body-md">
+<span class="font-bold">Phù hợp hoàn hảo với hồ sơ dinh dưỡng của bạn</span> — Ít natri · Giàu chất xơ · Tốt cho huyết áp tim mạch
+          </div>
+</div>
+<button class="font-label-md text-label-md underline hover:text-brand-900 transition-colors shrink-0 pl-10 sm:pl-0 font-semibold" type="button">
+          (Vì sao?)
+        </button>
+</div>
+<!-- Allergy Alert Verification -->
+<div class="p-3.5 px-4 rounded-2xl bg-surface-container-lowest text-ink-700 flex items-center gap-3 shadow-sm">
+<span class="material-symbols-outlined text-ok-fg text-[20px] shrink-0">verified_user</span>
+<p class="font-body-sm text-body-sm">
+<span class="font-semibold text-ink-900">An toàn dị ứng:</span> Không chứa thành phần cảnh báo của bạn. (Hải sản tôm thẻ tươi đã được xác nhận an toàn theo hồ sơ cá nhân Lan Nguyễn).
+        </p>
+</div>
+<!-- Meta Chips Bar -->
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest text-ink-700 shadow-sm">
+<span class="material-symbols-outlined text-brand-600 text-[18px]">timer</span>
+<span class="font-label-md text-label-md">25 phút</span>
+</div>
+<!-- Servings Stepper -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-lowest text-ink-900 shadow-sm">
+<span class="material-symbols-outlined text-brand-600 text-[18px]">group</span>
+<span class="font-label-md text-label-md mr-1">Khẩu phần:</span>
+<div class="flex items-center bg-surface-sunken rounded-lg p-0.5">
+<button aria-label="Giảm khẩu phần" class="w-8 h-8 rounded-md flex items-center justify-center hover:bg-surface-default text-ink-700 font-bold transition-all disabled:opacity-40" id="servings-dec" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-lg text-label-lg px-2.5 min-w-[24px] text-center font-bold text-ink-900" id="servings-count">2</span>
+<button aria-label="Tăng khẩu phần" class="w-8 h-8 rounded-md flex items-center justify-center hover:bg-surface-default text-ink-700 font-bold transition-all" id="servings-inc" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest text-ink-700 shadow-sm">
+<span class="material-symbols-outlined text-macro-carb text-[18px]">signal_cellular_alt</span>
+<span class="font-label-md text-label-md">Độ khó: <span class="font-bold text-ink-900">Dễ</span></span>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest text-ink-700 shadow-sm">
+<span class="material-symbols-outlined text-brand-500 text-[18px]">local_fire_department</span>
+<span class="font-label-md text-label-md"><span class="font-bold text-ink-900" id="meta-calories">320</span> kcal / khẩu phần</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-brand-50 text-brand-700 shadow-sm ml-auto">
+<span class="material-symbols-outlined text-[18px] text-macro-carb" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold">4.9</span>
+<span class="text-ink-500 font-legal-micro text-legal-micro">(128 đánh giá)</span>
+</div>
+</div>
+</div>
+<!-- Main Dual Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: Content, Tabs, Ingredients, Prep Steps -->
+<section class="lg:col-span-7 flex flex-col gap-6">
+<!-- Visual Hero Media (4:3 Standard Aspect Ratio) -->
+<div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-md bg-surface-sunken">
+<img class="w-full h-full object-cover" data-alt="A steaming hot ceramic bowl of vibrant golden Vietnamese pumpkin soup cooked with fresh prawns, garnished with freshly chopped cilantro, spring onions, and cracked black pepper. Soft natural morning daylight, pristine Nordic culinary minimalist tabletop aesthetic with deep green herbs and earthy ceramic textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCofx0dVITiHJPmFDAfffJEa5GAl-KCmkzo9JFmZrKQ_eSgCItWS3V54-TdDTti-T1S4njgAppTUs5c4wnjxkIfeItlYHXK2Hm3u6R_pHCEaoCNTAzSu7AxD2cKjxjxXm0sZ06a53vtGbfLuup8MSWGRHnV8tjWAUuACF6rhrdG_qWT0oWvFuioGnZOLneEJh4ViWdpCBFEQelLisLPiY9d0xvIH9PqsycUbD86rfxWiXZOIk80gUB8"/>
+<div class="absolute bottom-4 left-4 bg-ink-900/70 backdrop-blur-md px-3.5 py-2 rounded-xl text-surface-default flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-300 text-[18px]">skillet</span>
+<span class="font-label-sm text-label-sm font-semibold">Công thức gia đình Nam Bộ thanh đạm</span>
+</div>
+</div>
+<!-- Interactive Tabs Section -->
+<div class="bg-surface-default rounded-2xl p-4 shadow-sm flex flex-col gap-5">
+<div class="flex items-center gap-1 bg-surface-sunken p-1 rounded-xl overflow-x-auto" role="tablist">
+<button aria-selected="true" class="flex-1 min-w-[120px] py-2 px-3 rounded-lg font-label-md text-label-md font-semibold text-center bg-surface-default text-brand-700 shadow-sm transition-all" id="tab-btn-ingredients" role="tab">
+              Nguyên liệu
+            </button>
+<button aria-selected="false" class="flex-1 min-w-[130px] py-2 px-3 rounded-lg font-label-md text-label-md font-medium text-center text-ink-500 hover:text-ink-900 transition-all" id="tab-btn-steps" role="tab">
+              Cách làm từng bước
+            </button>
+<button aria-selected="false" class="flex-1 min-w-[140px] py-2 px-3 rounded-lg font-label-md text-label-md font-medium text-center text-ink-500 hover:text-ink-900 transition-all" id="tab-btn-insights" role="tab">
+              Dinh dưỡng chuyên sâu
+            </button>
+<button aria-selected="false" class="flex-1 min-w-[110px] py-2 px-3 rounded-lg font-label-md text-label-md font-medium text-center text-ink-500 hover:text-ink-900 transition-all" id="tab-btn-reviews" role="tab">
+              Đánh giá (4.9★)
+            </button>
+</div>
+<!-- Tab Content: Ingredients List -->
+<div class="space-y-4" id="tab-content-ingredients">
+<div class="flex items-center justify-between pb-2">
+<span class="font-headline-sm text-headline-sm text-ink-900">Danh mục nguyên liệu tươi sạch</span>
+<span class="font-body-sm text-body-sm text-ink-500">Tự động tính theo <span class="font-bold text-brand-600" id="label-servings-ref">2</span> phần ăn</span>
+</div>
+<!-- Ingredient Row 1: Tôm thẻ -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<label class="flex items-center gap-3 cursor-pointer min-w-0">
+<input class="ingredient-check w-5 h-5 rounded-md accent-brand-600 text-brand-600 focus:ring-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="ingredient-name font-label-lg text-label-lg text-ink-900 font-semibold truncate">Tôm thẻ tươi bóc nõn</span>
+<span class="font-legal-micro text-legal-micro text-ink-500">Đạm sinh học cao, giàu Selen</span>
+</div>
+</label>
+<div class="flex items-center gap-3 shrink-0">
+<span class="font-label-lg text-label-lg font-bold text-ink-900"><span class="scaled-qty" data-base-qty="200">200</span>g</span>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-lg bg-surface-default text-ink-700 hover:bg-brand-50 hover:text-brand-700 shadow-sm" type="button">
+                  Thay thế
+                </button>
+</div>
+</div>
+<!-- Ingredient Row 2: Bí đỏ hồ lô -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<label class="flex items-center gap-3 cursor-pointer min-w-0">
+<input class="ingredient-check w-5 h-5 rounded-md accent-brand-600 text-brand-600 focus:ring-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="ingredient-name font-label-lg text-label-lg text-ink-900 font-semibold truncate">Bí đỏ hồ lô dẻo ngọt</span>
+<span class="font-legal-micro text-legal-micro text-ink-500">Giàu Carotenoid, Kali kiểm soát tim mạch</span>
+</div>
+</label>
+<div class="flex items-center gap-3 shrink-0">
+<span class="font-label-lg text-label-lg font-bold text-ink-900"><span class="scaled-qty" data-base-qty="300">300</span>g</span>
+</div>
+</div>
+<!-- Ingredient Row 3: Hành lá, ngò rí (Pre-checked) -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all opacity-85">
+<label class="flex items-center gap-3 cursor-pointer min-w-0">
+<input checked="" class="ingredient-check w-5 h-5 rounded-md accent-brand-600 text-brand-600 focus:ring-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="ingredient-name font-label-lg text-label-lg text-ink-900 font-semibold line-through text-ink-500">Hành lá &amp; ngò rí rửa sạch</span>
+<span class="font-legal-micro text-legal-micro text-ink-500">Gia vị tươi chống oxy hóa</span>
+</div>
+</label>
+<div class="flex items-center gap-3 shrink-0">
+<span class="font-label-lg text-label-lg font-semibold text-ink-500"><span class="scaled-qty" data-base-qty="20">20</span>g</span>
+<span class="font-label-sm text-label-sm text-brand-700 bg-brand-100 px-2 py-0.5 rounded-md">Đã có</span>
+</div>
+</div>
+<!-- Ingredient Row 4: Dầu ô liu (Pre-checked) -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all opacity-85">
+<label class="flex items-center gap-3 cursor-pointer min-w-0">
+<input checked="" class="ingredient-check w-5 h-5 rounded-md accent-brand-600 text-brand-600 focus:ring-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="ingredient-name font-label-lg text-label-lg text-ink-900 font-semibold line-through text-ink-500">Dầu ô liu / dầu hạt cải nguyên chất</span>
+<span class="font-legal-micro text-legal-micro text-ink-500">Chất béo không bão hòa đơn</span>
+</div>
+</label>
+<div class="flex items-center gap-3 shrink-0">
+<span class="font-label-lg text-label-lg font-semibold text-ink-500"><span class="scaled-qty" data-base-qty="5">5</span>ml</span>
+<span class="font-label-sm text-label-sm text-brand-700 bg-brand-100 px-2 py-0.5 rounded-md">Đã có</span>
+</div>
+</div>
+<!-- Ingredient Row 5: Hạt nêm nấm ít muối (Pre-checked) -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all opacity-85">
+<label class="flex items-center gap-3 cursor-pointer min-w-0">
+<input checked="" class="ingredient-check w-5 h-5 rounded-md accent-brand-600 text-brand-600 focus:ring-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="ingredient-name font-label-lg text-label-lg text-ink-900 font-semibold line-through text-ink-500">Hạt nêm nấm ít muối (giảm natri 40%)</span>
+<span class="font-legal-micro text-legal-micro text-ink-500">Gia vị khuyến nghị cho bệnh tim mạch</span>
+</div>
+</label>
+<div class="flex items-center gap-3 shrink-0">
+<span class="font-label-lg text-label-lg font-semibold text-ink-500"><span class="scaled-qty" data-base-qty="1">1</span> thìa cà phê</span>
+<span class="font-label-sm text-label-sm text-brand-700 bg-brand-100 px-2 py-0.5 rounded-md">Đã có</span>
+</div>
+</div>
+<!-- CTA Action Bar -->
+<div class="pt-4 flex flex-col sm:flex-row gap-3">
+<button class="flex-1 h-12 px-4 rounded-xl bg-accent-500 hover:bg-accent-600 text-surface-default font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-all" id="add-to-cart-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+<span>Thêm món thiếu vào giỏ (<span id="cart-item-count">2</span> món · 65.000đ)</span>
+</button>
+<button class="h-12 px-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-surface-default font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<span>Thêm vào tuần</span>
+</button>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-surface-sunken hover:bg-brand-50 text-ink-700 hover:text-brand-700 font-label-md text-label-md flex items-center justify-center gap-2 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+<span>Bật chế độ nấu rảnh tay (Hands-free Cook Mode)</span>
+</button>
+</div>
+</div>
+<!-- Preparation Steps Overview -->
+<div class="bg-surface-default rounded-2xl p-6 shadow-sm space-y-5">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-ink-900">Hướng dẫn thực hiện từng bước</h2>
+<span class="font-legal-micro text-legal-micro uppercase px-2.5 py-1 bg-brand-50 text-brand-700 font-bold rounded-md">3 Bước cốt lõi</span>
+</div>
+<!-- Step 1 -->
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-brand-100 text-brand-800 font-bold flex items-center justify-center shrink-0 font-label-lg">
+              1
+            </div>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<h3 class="font-label-lg text-label-lg text-ink-900 font-bold">Sơ chế nguyên liệu tươi</h3>
+<span class="font-label-sm text-label-sm text-ink-500 bg-surface-sunken px-2 py-0.5 rounded-md">5 phút</span>
+</div>
+<p class="font-body-md text-body-md text-ink-700 leading-relaxed">
+                Tôm rửa sạch, lột vỏ, rút chỉ đen lưng rồi giã thô với đầu hành trắng và một chút tiêu hạt. Bí đỏ gọt vỏ, thái miếng vuông vừa ăn (khoảng 2.5cm) để giữ độ dẻo không bị nát khi sôi.
+              </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-4 pt-3">
+<div class="w-8 h-8 rounded-full bg-brand-100 text-brand-800 font-bold flex items-center justify-center shrink-0 font-label-lg">
+              2
+            </div>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<h3 class="font-label-lg text-label-lg text-ink-900 font-bold">Xào săn tôm &amp; tạo nước dùng thanh</h3>
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-accent-50 text-accent-600 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>10 phút</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-ink-700 leading-relaxed">
+                Đun nóng 5ml dầu ô liu trong nồi, cho thịt tôm giã thô vào đảo nhanh tay trong 1 phút đến khi chuyển màu hồng thơm. Châm 700ml nước lọc đun sôi bùng, vớt bọt liên tục để nước canh giữ trọn vị thanh trong.
+              </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-4 pt-3">
+<div class="w-8 h-8 rounded-full bg-brand-100 text-brand-800 font-bold flex items-center justify-center shrink-0 font-label-lg">
+              3
+            </div>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<h3 class="font-label-lg text-label-lg text-ink-900 font-bold">Nấu chín bí &amp; nêm vị dưỡng sinh</h3>
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-accent-50 text-accent-600 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>15 phút</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-ink-700 leading-relaxed">
+                Thả bí đỏ vào nấu lửa vừa trong khoảng 10-12 phút cho bí mềm dẻo tự nhiên. Nêm 1 thìa cà phê hạt nêm nấm ít muối. Tắt bếp, rắc hành ngò thái nhỏ và tiêu xay lên trên, dùng nóng trong bữa trưa.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: Nutrition Facts, MacroRing Donut, Doctor Insight, Medical Disclaimer -->
+<aside class="lg:col-span-5 flex flex-col gap-6">
+<!-- NutritionFacts Card -->
+<div class="bg-surface-default rounded-3xl p-6 shadow-sm flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-legal-micro text-legal-micro uppercase tracking-wider text-ink-500 font-semibold">Phân tích chuyên sâu</span>
+<h2 class="font-headline-sm text-headline-sm text-ink-900">Bảng Dinh Dưỡng / Khẩu phần</h2>
+</div>
+<span class="material-symbols-outlined text-brand-600 text-[26px]">vital_signs</span>
+</div>
+<!-- Energy Target Highlight -->
+<div class="p-4 rounded-2xl bg-surface-container-low flex items-center justify-between">
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-display text-display text-brand-900 leading-none" id="fact-calories">320</span>
+<span class="font-label-lg text-label-lg font-bold text-ink-500">kcal</span>
+</div>
+<p class="font-legal-micro text-legal-micro text-ink-500 mt-1">Khuyến nghị: 1.650 kcal/ngày</p>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md font-bold text-brand-600">19%</span>
+<p class="font-legal-micro text-legal-micro text-ink-500">Nhu cầu hàng ngày</p>
+</div>
+</div>
+<!-- Donut Visualization & Macro Breakdown -->
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
+<!-- Macro Donut (SVG) -->
+<div class="sm:col-span-5 flex justify-center">
+<div class="relative w-36 h-36 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 100 100">
+<!-- Background Track -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#EEF3F0" stroke-width="8"></circle>
+<!-- Protein Segment (Blue #3B82F6) - 28% of 251.2 = ~70 -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#3B82F6" stroke-dasharray="70.3 251.2" stroke-dashoffset="0" stroke-width="8"></circle>
+<!-- Carb Segment (Amber #F59E0B) - 40% of 251.2 = ~100 -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#F59E0B" stroke-dasharray="100.5 251.2" stroke-dashoffset="-70.3" stroke-width="8"></circle>
+<!-- Fat Segment (Rose #EC4899) - 16% of 251.2 = ~40 -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#EC4899" stroke-dasharray="40.2 251.2" stroke-dashoffset="-170.8" stroke-width="8"></circle>
+<!-- Fiber Segment (Mint #10B981) - 16% of 251.2 = ~40 -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#10B981" stroke-dasharray="40.2 251.2" stroke-dashoffset="-211" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-ink-500">Macros</span>
+<span class="font-label-lg text-label-lg font-bold text-ink-900">4 Nhóm</span>
+</div>
+</div>
+</div>
+<!-- Macro Indicators -->
+<div class="sm:col-span-7 flex flex-col gap-2">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="flex items-center gap-1.5 text-ink-700">
+<span class="w-2.5 h-2.5 rounded-full bg-macro-protein"></span>
+                  Đạm (Protein)
+                </span>
+<span class="font-bold text-ink-900">22g (28%)</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-macro-protein h-full rounded-full" style="width: 28%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm pt-1">
+<span class="flex items-center gap-1.5 text-ink-700">
+<span class="w-2.5 h-2.5 rounded-full bg-macro-carb"></span>
+                  Tinh bột (Carb)
+                </span>
+<span class="font-bold text-ink-900">30g (17%)</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-macro-carb h-full rounded-full" style="width: 17%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm pt-1">
+<span class="flex items-center gap-1.5 text-ink-700">
+<span class="w-2.5 h-2.5 rounded-full bg-macro-fat"></span>
+                  Chất béo (Lipid)
+                </span>
+<span class="font-bold text-ink-900">8g (16%)</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-macro-fat h-full rounded-full" style="width: 16%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm pt-1">
+<span class="flex items-center gap-1.5 text-ink-700">
+<span class="w-2.5 h-2.5 rounded-full bg-macro-fiber"></span>
+                  Chất xơ (Fiber)
+                </span>
+<span class="font-bold text-ok-fg">6.5g (Rất tốt, 26%)</span>
+</div>
+<div class="w-full bg-surface-sunken h-2 rounded-full overflow-hidden">
+<div class="bg-macro-fiber h-full rounded-full" style="width: 26%"></div>
+</div>
+</div>
+</div>
+<!-- Micro Nutrients Spec Table -->
+<div class="pt-2 space-y-2.5">
+<div class="flex items-center justify-between py-2 px-3 rounded-xl bg-surface-container-low font-body-sm text-body-sm">
+<span class="text-ink-700 font-medium">Natri (Sodium)</span>
+<div class="text-right">
+<span class="font-bold text-ink-900">410 mg</span>
+<span class="font-label-sm text-label-sm text-ok-fg ml-1.5 font-semibold">An toàn (&lt;600mg)</span>
+</div>
+</div>
+<div class="flex items-center justify-between py-2 px-3 rounded-xl bg-surface-container-low font-body-sm text-body-sm">
+<span class="text-ink-700 font-medium">Đường tự nhiên từ rau củ</span>
+<span class="font-bold text-ink-900">5 g</span>
+</div>
+<div class="flex items-center justify-between py-2 px-3 rounded-xl bg-surface-container-low font-body-sm text-body-sm">
+<span class="text-ink-700 font-medium">Kali (Hỗ trợ giãn mạch máu)</span>
+<span class="font-bold text-brand-700">480 mg (Rất cao)</span>
+</div>
+</div>
+</div>
+<!-- Clinical Nutritionist Expert Note -->
+<div class="bg-surface-default rounded-3xl p-6 shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm ring-2 ring-brand-200" data-alt="Portrait photo of a Vietnamese clinical nutritionist doctor wearing a clean medical coat and pleasant warm smile, soft hospital consultation office background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPmk1g0XpcSEq-CyOLbl626oz6Z7vEnZOLKTTpUWvQ89L4yMs2OR8hH7HuU90tFn34bbCMix9FRlXi8l_mHhXsv1rC0S53LgYZ81LH9hzaQhJs4ZZMfunDNRvA-XEEVs2AEGkXV-L-PDHxDZk1JCBTBxQ361WiOI89MC-nBojEvTfv8w3EHMRCtxOJC6C8SO2MF7vUarDlo-RrQm2lXrO0eGTATDDuD0NXdl6wwXCdZUw4CaYRkMLy"/>
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-ink-900">ThS. BS. Nguyễn Hoài Thu</h3>
+<p class="font-legal-micro text-legal-micro text-brand-600 font-medium">Chuyên khoa Dinh dưỡng Lâm sàng &amp; Tiết chế</p>
+</div>
+</div>
+<div class="p-4 rounded-2xl bg-brand-50 text-brand-800">
+<p class="font-body-sm text-body-sm leading-relaxed italic">
+              “Bí đỏ rất giàu phức hợp beta-carotene chuyển hóa thành vitamin A hỗ trợ niêm mạc hô hấp và hệ miễn dịch. Khi kết hợp cùng đạm lành tính từ tôm tươi bóc nõn và chế biến nêm nhạt, đây là món canh lý tưởng giúp ổn định huyết áp, bảo vệ thành mạch mà không gây tích nước do natri.”
+            </p>
+</div>
+</div>
+<!-- Medical Disclaimer -->
+<div class="p-4 rounded-2xl bg-warn-bg flex items-start gap-3 shadow-sm">
+<span class="material-symbols-outlined text-warn-fg text-[20px] shrink-0 mt-0.5">medical_information</span>
+<p class="font-body-sm text-body-sm text-warn-fg leading-snug">
+<strong>Lưu ý y tế:</strong> Thông tin dinh dưỡng mang tính hỗ trợ điều chỉnh chế độ ăn uống khoa học. Hãy tham khảo ý kiến bác sĩ điều trị nếu bạn đang dùng thuốc tim mạch hoặc có bệnh lý thận mạn tính.
+          </p>
+</div>
+</aside>
+</div>
+</div>
+<!-- Interactive Logic -->
+<script>
+    (function() {
+      // Servings Scaler Logic
+      var servings = 2;
+      var baseCalories = 160; // 160 kcal per serving
+      var servingsCountEl = document.getElementById('servings-count');
+      var labelServingsRefEl = document.getElementById('label-servings-ref');
+      var decBtn = document.getElementById('servings-dec');
+      var incBtn = document.getElementById('servings-inc');
+      var metaCalEl = document.getElementById('meta-calories');
+      var factCalEl = document.getElementById('fact-calories');
+      var scaledElements = document.querySelectorAll('.scaled-qty');
+
+      function updateQuantities(newServings) {
+        servings = newServings;
+        servingsCountEl.textContent = servings;
+        labelServingsRefEl.textContent = servings;
+        decBtn.disabled = servings <= 1;
+
+        scaledElements.forEach(function(el) {
+          var base = parseFloat(el.getAttribute('data-base-qty'));
+          var result = (base / 2) * servings;
+          el.textContent = Number.isInteger(result) ? result : result.toFixed(1);
+        });
+
+        var perServingCalories = 320; // Keep standard per-portion reference or multiply as needed
+        metaCalEl.textContent = perServingCalories;
+        factCalEl.textContent = perServingCalories;
+      }
+
+      decBtn.addEventListener('click', function() {
+        if (servings > 1) {
+          updateQuantities(servings - 1);
+        }
+      });
+
+      incBtn.addEventListener('click', function() {
+        if (servings < 12) {
+          updateQuantities(servings + 1);
+        }
+      });
+
+      // Favorite Button Toggle
+      var favBtn = document.getElementById('favorite-btn');
+      var favIcon = document.getElementById('favorite-icon');
+      var isFav = false;
+      favBtn.addEventListener('click', function() {
+        isFav = !isFav;
+        if (isFav) {
+          favIcon.style.fontVariationSettings = "'FILL' 1";
+          favIcon.classList.add('text-macro-fat');
+        } else {
+          favIcon.style.fontVariationSettings = "'FILL' 0";
+          favIcon.classList.remove('text-macro-fat');
+        }
+      });
+
+      // Ingredient Checkbox Strike-through
+      var ingredientChecks = document.querySelectorAll('.ingredient-check');
+      var cartCountEl = document.getElementById('cart-item-count');
+
+      function refreshCartSummary() {
+        var uncheckedCount = 0;
+        ingredientChecks.forEach(function(cb) {
+          var nameSpan = cb.closest('label').querySelector('.ingredient-name');
+          if (cb.checked) {
+            nameSpan.classList.add('line-through', 'text-ink-500');
+          } else {
+            nameSpan.classList.remove('line-through', 'text-ink-500');
+            uncheckedCount++;
+          }
+        });
+        if (cartCountEl) {
+          cartCountEl.textContent = uncheckedCount;
+        }
+      }
+
+      ingredientChecks.forEach(function(cb) {
+        cb.addEventListener('change', refreshCartSummary);
+      });
+
+      // Tab switching state styling
+      var tabs = [
+        document.getElementById('tab-btn-ingredients'),
+        document.getElementById('tab-btn-steps'),
+        document.getElementById('tab-btn-insights'),
+        document.getElementById('tab-btn-reviews')
+      ];
+
+      tabs.forEach(function(tab) {
+        if (!tab) return;
+        tab.addEventListener('click', function() {
+          tabs.forEach(function(t) {
+            t.setAttribute('aria-selected', 'false');
+            t.className = 'flex-1 min-w-[110px] py-2 px-3 rounded-lg font-label-md text-label-md font-medium text-center text-ink-500 hover:text-ink-900 transition-all';
+          });
+          tab.setAttribute('aria-selected', 'true');
+          tab.className = 'flex-1 min-w-[110px] py-2 px-3 rounded-lg font-label-md text-label-md font-semibold text-center bg-surface-default text-brand-700 shadow-sm transition-all';
+        });
+      });
+
+      // Add to cart feedback
+      var addToCartBtn = document.getElementById('add-to-cart-btn');
+      if (addToCartBtn) {
+        addToCartBtn.addEventListener('click', function() {
+          var originalContent = addToCartBtn.innerHTML;
+          addToCartBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Đã thêm 2 nguyên liệu vào giỏ!</span>';
+          addToCartBtn.classList.replace('bg-accent-500', 'bg-brand-600');
+          setTimeout(function() {
+            addToCartBtn.innerHTML = originalContent;
+            addToCartBtn.classList.replace('bg-brand-600', 'bg-accent-500');
+          }, 2400);
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-12 mt-12 shadow-[0_-1px_4px_rgba(20,32,26,0.02)]"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-8"><div class="flex flex-col md:flex-row items-center justify-between gap-6"><div class="flex items-center gap-3"><img alt="NutriCook Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZHhzgLb7HfBYJUJSVc_KzIsDuc71soJtwJZPK0ebbLwp1fdDAFbNPgPFoVkoDyphbaqg6wjB4ea1LG5IXEzgb9lBLh_7VXm0e5lCe2AEFqFQVQbcKcKEj4V2gNRRSJBuoLWFHvaLRTrG0NDy5NX-cAlBiWGmLFatPZfjwXKvM4F1hi_s-dqw-U4ptzuUVDdK_QZj2RGw1TvNR6NnCV796HpFsxOVR905Q_p2jRvHXUDYICxSHM8Ya"/><span class="font-headline-sm text-headline-sm text-brand-900 font-bold">NutriCook</span><span class="hidden md:inline font-body-sm text-body-sm text-ink-500">— Ăn đúng sống khỏe</span></div><div class="flex flex-wrap items-center justify-center gap-6"><a class="font-body-sm text-body-sm text-ink-700 hover:text-brand-600 transition-colors" data-path="about" href="#">Về chúng tôi</a><a class="font-body-sm text-body-sm text-ink-700 hover:text-brand-600 transition-colors" data-path="methodology" href="#">Nguồn &amp; Phương pháp</a><a class="font-body-sm text-body-sm text-ink-700 hover:text-brand-600 transition-colors" data-path="privacy-terms" href="#">Điều khoản &amp; Bảo mật</a></div></div><div class="p-4 rounded-xl bg-warn-bg flex items-start gap-3"><span class="material-symbols-outlined text-warn-fg text-[20px] shrink-0 mt-0.5">medical_information</span><p class="font-body-sm text-body-sm text-warn-fg"><strong>Lưu ý y tế:</strong> Thông tin mang tính tham khảo. Hãy hỏi bác sĩ nếu bạn đang dùng thuốc hoặc có bệnh nền.</p></div><div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-ink-100"><p class="font-legal-micro text-legal-micro text-ink-500">© 2025 NutriCook Việt Nam. Nền tảng dinh dưỡng cá nhân hóa thông minh.</p><div class="flex items-center gap-4 text-ink-500 font-legal-micro text-legal-micro"><span>ISO 22000 Data Model</span><span>•</span><span>Viện Dinh Dưỡng Quốc Gia</span></div></div></div></footer></body></html>
