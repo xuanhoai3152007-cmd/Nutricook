@@ -1,4 +1,5 @@
 import { getSupabaseClient } from '../lib/supabase.js'
+import { getEdgeFunctionError } from './edgeFunctionError.js'
 
 class MealPlanAdviceError extends Error {
   constructor(message, code) {
@@ -14,14 +15,10 @@ export async function getMealPlanAdvice(stats) {
   })
 
   if (error) {
-    if (error.context instanceof Response) {
-      const responseBody = await error.context.clone().json().catch(() => null)
-      const failure = responseBody?.error
-      if (typeof failure?.message === 'string' && failure.message) {
-        throw new MealPlanAdviceError(failure.message, failure.code)
-      }
-    }
-    throw new Error(error.message || 'Không thể tạo lời khuyên AI.')
+    const details = await getEdgeFunctionError(error)
+    const adviceError = new MealPlanAdviceError(details.message, details.code)
+    adviceError.status = details.status
+    throw adviceError
   }
   if (data?.error) {
     throw new MealPlanAdviceError(

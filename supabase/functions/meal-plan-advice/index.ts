@@ -132,8 +132,25 @@ Deno.serve(async (req) => {
       }),
     });
     if (!response.ok) {
-      console.error('Meal plan AI provider returned an error:', response.status);
-      return fail('AI_PROVIDER_ERROR', 'Dịch vụ AI hiện chưa trả lời được; hãy thử lại sau', 502);
+      const providerError = await response.json().catch(() => null);
+      const providerType = typeof providerError?.error?.type === 'string'
+        ? providerError.error.type
+        : 'unknown';
+      console.error('Meal plan AI provider returned an error:', response.status, providerType);
+
+      if (response.status === 401 || response.status === 403) {
+        return fail('AI_INVALID_KEY', 'Khóa Anthropic không hợp lệ hoặc chưa có quyền sử dụng API. Hãy cập nhật ANTHROPIC_API_KEY trong Supabase Secrets.', 502);
+      }
+      if (response.status === 404) {
+        return fail('AI_MODEL_NOT_FOUND', `Không tìm thấy model AI "${MODEL}". Hãy đặt AI_MODEL thành một model Anthropic còn được hỗ trợ rồi triển khai lại function.`, 502);
+      }
+      if (response.status === 429) {
+        return fail('AI_PROVIDER_RATE_LIMITED', 'Anthropic đang giới hạn yêu cầu hoặc tài khoản đã hết hạn mức. Vui lòng thử lại sau.', 502);
+      }
+      if (response.status === 529 || response.status >= 500) {
+        return fail('AI_PROVIDER_UNAVAILABLE', 'Anthropic đang tạm thời quá tải hoặc không khả dụng. Vui lòng thử lại sau.', 502);
+      }
+      return fail('AI_PROVIDER_ERROR', `Anthropic từ chối yêu cầu (HTTP ${response.status}). Hãy kiểm tra cấu hình AI_MODEL và quyền của API key.`, 502);
     }
     body = await response.json() as AnthropicResponse;
   } catch (error) {
